@@ -94,3 +94,8 @@ The ShoeShop e-commerce website allows users to browse a collection of shoes, vi
 ### `Footer`
 - **Displays** branding and copyright information.
 
+### CSS Styles (App.css)
+- Custom Styling: The App.css file defines styles for the entire application.
+- Animations: Contains keyframes for hover effects, sliding transitions, and animations for elements like product cards and sliders.
+- Responsive Design: Uses media queries to ensure the website is mobile-friendly and adapts to different screen sizes.
+
