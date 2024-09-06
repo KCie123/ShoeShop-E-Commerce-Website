@@ -1,101 +1,70 @@
-# ShoeShop E-Commerce Website
+# Getting Started with Create React App
 
-This project is an e-commerce web application built with React, designed for selling shoes online. It features a dynamic homepage, a product catalog, shopping cart functionality, and more. The project uses React components to render different sections of the site and manage the state of the shopping cart.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Project Description
-The ShoeShop e-commerce website allows users to browse a collection of shoes, view product details, add items to the cart, and manage their cart. The homepage features popular shoe collections, brand logos, and buttons for navigating between pages like "Shop", "About", and "Contact". The project uses CSS for styling and animations, giving users a smooth and interactive experience.
+## Available Scripts
 
-### Key Features:
-- **Product Catalog:** Displays a list of shoes with product details like price, description, and images.
-- **Shopping Cart:** Allows users to add/remove items from the cart and displays the total price.
-- **Homepage Slider:** Shows popular shoes in a slider format with animations.
-- **Filter Products:** Users can filter products based on categories such as shoes, slippers, or boots.
-- **Responsive Design:** The website adapts to different screen sizes using CSS and media queries.
-- **Animations:** Includes hover effects and dynamic transitions on buttons, images, and sliders.
+In the project directory, you can run:
 
-## Technologies Used:
-- **React:** JavaScript library for building user interfaces.
-- **React Icons:** Used for icons such as shopping cart and user icons.
-- **CSS (App.css):** Custom styling and animations.
-- **JavaScript (ES6):** Handles dynamic updates and interactions.
-- **HTML5:** Structuring the web pages.
+### `npm start`
 
-## How to Install and Run the Project
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Prerequisites
-- **Node.js** (version 12.x or higher)
-- **npm** or **yarn** (for managing dependencies)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### Steps
-1. Clone the Repository:
-   ```bash
-   git clone https://github.com/yourusername/shoeshop-ecommerce.git
-   cd shoeshop-ecommerce
+### `npm test`
 
-2. Install dependencies:
-   ```bash
-   npm install
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-3. Run the application:
-   ```bash
-   npm start
+### `npm run build`
 
-4. Open the browser and navigate to http://localhost:3000.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### File Structure
-      
-      ShoeShop
-      │
-      ├── public/                   # Public assets and the index.html
-      ├── src/                      # Source files for the React components and CSS
-      │   ├── App.js                # Main application component
-      │   ├── App.css               # Global styles and animations
-      │   ├── components/           # React components (Header, Footer, ProductGrid, etc.)
-      │   └── images/               # Image assets for the products and brands
-      ├── package.json              # Project dependencies and scripts
-      └── README.md                 # This documentation file
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Class Descriptions
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `App.js`
-- **Manages the state** of the application, including the cart items and the current page being viewed.
-- **Contains components** for:
-  - **Header:** Displays navigation links and the shopping cart icon.
-  - **HomePage:** Displays the featured products, collections, and brand logos.
-  - **ShopPage:** Lists products with filtering options and add-to-cart functionality.
-  - **Cart:** Shows items added to the cart and allows users to remove items.
-  - **Footer:** Displays a footer with branding information.
+### `npm run eject`
 
-### `Header`
-- **Props:**
-  - `cartItems`: Array of items currently in the cart.
-  - `toggleCart`: Function to toggle the cart view.
-  - `setCurrentPage`: Function to set the current page (home, shop, etc.).
-- **Displays** navigation links (Home, Shop, About, Contact) and the cart icon with the number of items.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### `ProductCard`
-- **Props:**
-  - `product`: Object containing product details like name, price, and image.
-  - `addToCart`: Function to add the product to the cart.
-- **Displays** the product image, name, price, and a button to add the item to the cart.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### `ProductGrid`
-- **Props:**
-  - `products`: Array of product objects.
-  - `addToCart`: Function to add products to the cart.
-- **Renders** a grid of `ProductCard` components.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-### `Cart`
-- **Props:**
-  - `cartItems`: Array of items currently in the cart.
-  - `removeFromCart`: Function to remove an item from the cart.
-- **Displays** a list of items in the cart, with the ability to remove items and shows the total cost.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-### `Footer`
-- **Displays** branding and copyright information.
+## Learn More
 
-### CSS Styles (App.css)
-- Custom Styling: The App.css file defines styles for the entire application.
-- Animations: Contains keyframes for hover effects, sliding transitions, and animations for elements like product cards and sliders.
-- Responsive Design: Uses media queries to ensure the website is mobile-friendly and adapts to different screen sizes.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

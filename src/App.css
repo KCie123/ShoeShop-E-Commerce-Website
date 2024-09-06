@@ -1,0 +1,1028 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Reset some default styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure the app takes up full height */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom styles for the Spline container */
+#spline-container {
+  transition: all 0.3s ease;
+}
+
+#spline-container:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom button hover effect */
+button:hover {
+  opacity: 0.9;
+}
+
+/* Custom link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #4299e1; /* Tailwind's blue-500 */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+  opacity: 0.8;
+}
+
+/* Dark mode toggle styles */
+.toggle-checkbox:checked {
+  right: 0;
+  border-color: #68D391;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #68D391;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+.dark-mode header {
+  background-color: #2d3748;
+}
+
+.dark-mode .bg-white {
+  background-color: #2d3748;
+  color: #e2e8f0;
+}
+
+.dark-mode .text-gray-800 {
+  color: #e2e8f0;
+}
+
+.dark-mode .hover\:bg-gray-200:hover {
+  background-color: #4a5568;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dark-mode .bg-white {
+  background-color: #2d3748;
+}
+
+.dark-mode .text-gray-600 {
+  color: #a0aec0;
+}
+
+.dark-mode .bg-gray-100 {
+  background-color: #1a202c;
+}
+
+/* Cart styles */
+.cart-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-remove {
+  color: #e53e3e;
+  cursor: pointer;
+}
+
+.cart-total {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.popular-shoes-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.popular-shoes-slider .slide {
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-arrow.left {
+  left: 10px;
+}
+
+.slider-arrow.right {
+  right: 10px;
+}
+
+.category-filter {
+  margin-bottom: 1rem;
+}
+
+.category-filter select {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  background-color: white;
+}
+
+.about-section,
+.contact-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Home page styles */
+.featured-collection,
+.about-us {
+  transition: transform 0.3s ease-in-out;
+}
+
+.featured-collection:hover,
+.about-us:hover {
+  transform: translateY(-5px);
+}
+
+.brand-logo {
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+}
+
+.brand-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .popular-shoes-slider {
+    width: 100%;
+  }
+}
+
+.popular-shoes-slider img {
+  width: auto;
+  height: 200px;
+  object-fit: contain;
+  background-color: #f3f4f6;
+}
+
+.shoe-image-container {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  background-color: #f3f4f6;
+}
+
+.shoe-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.shoe-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.shoe-image-container:hover .shoe-info {
+  transform: translateY(0);
+}
+
+.shoe-name {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.shoe-price {
+  font-size: 0.9em;
+}
+
+/* Styles for ProductCard component */
+.product-image-container {
+  position: relative;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.product-image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #f0f0f0 25%, transparent 25%) -50px 0,
+              linear-gradient(225deg, #f0f0f0 25%, transparent 25%) -50px 0,
+              linear-gradient(315deg, #f0f0f0 25%, transparent 25%),
+              linear-gradient(45deg, #f0f0f0 25%, transparent 25%);
+  background-size: 100px 100px;
+  background-color: #e0e0e0;
+  opacity: 0.3;
+}
+
+.product-image {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.product-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.product-image-container:hover .product-info {
+  transform: translateY(0);
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Add to Cart button styles */
+.add-to-cart-btn {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart icon animation */
+.cart-icon {
+  transition: transform 0.3s ease;
+}
+
+.cart-icon-animate {
+  animation: cartPulse 0.5s ease-out;
+}
+
+@keyframes cartPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+:root {
+  --primary-color: #4299e1;
+  --secondary-color: #2b6cb0;
+  --background-color: #000000;
+  --card-background: #1a1a1a;
+  --text-color: #ffffff;
+  --accent-color: #3182ce;
+  --beige-color: #f5e6d3; /* New light beige color */
+}
+
+/* Update various color classes */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dark-mode {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Update card styles */
+.popular-shoes,
+.feature-card,
+.product-card,
+.bg-white {
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+/* Update other components */
+.filter-container {
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+.filter-select {
+  color: var(--text-color);
+}
+
+/* Update text colors */
+.text-gray-600,
+.product-name,
+.product-price,
+.shoe-description {
+  color: var(--text-color);
+}
+
+/* Update button styles */
+.shop-now-button,
+.add-to-cart-btn,
+.visible-button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+/* Update slider arrow colors */
+.slider-arrow {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+/* Update the footer */
+footer {
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+/* Add these new styles at the end of your App.css file */
+.transition-opacity {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.fade-in[style*="animation-delay"] {
+  opacity: 0;
+}
+
+/* Ensure the main content is scrollable */
+main {
+  overflow-y: auto;
+  max-height: calc(100vh - 64px); /* Adjust based on your header height */
+}
+
+/* Update the transition for shoe descriptions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+/* Navbar styles */
+.nav-link {
+  position: relative;
+  font-weight: normal;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--beige-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--beige-color);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Visible button styles */
+.visible-button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.visible-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Banner/Panel styles */
+.popular-shoes {
+  background-color: #000000; /* Black background by default */
+  color: white; /* White text by default */
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.light-mode .popular-shoes {
+  background-color: #f8f8f8; /* Light background in light mode */
+  color: black; /* Black text in light mode */
+}
+
+.popular-shoes-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.shoe-image-container {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.shoe-image {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.shoe-info {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.shoe-name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.shoe-description {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.shoe-price {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--accent-color);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.slider-arrow:hover {
+  background-color: var(--secondary-color);
+}
+
+.slider-arrow.left {
+  left: 10px;
+}
+
+.slider-arrow.right {
+  right: 10px;
+}
+
+/* Icon button styles */
+.icon-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.icon-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* Updated home page styles */
+.feature-card {
+  background-color: #000000; /* Black background by default */
+  color: white; /* White text by default */
+  transition: all 0.3s ease;
+}
+
+.light-mode .feature-card {
+  background-color: white; /* Light background in light mode */
+  color: black; /* Black text in light mode */
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Add this new style for the featured image */
+.featured-image {
+  transition: all 0.3s ease;
+}
+
+.featured-image:hover {
+  transform: scale(1.05);
+}
+
+/* Update the PopularShoes component styles */
+.popular-shoes {
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Update the shop now button */
+.shop-now-button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.shop-now-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Update the filter styles */
+.filter-container {
+  background-color: #000000;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.filter-select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding-right: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.filter-select option {
+  background-color: #000000;
+  color: white;
+}
+
+.filter-container::after {
+  content: '▼';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.8rem;
+  color: var(--accent-color);
+}
+
+/* Update the product card styles */
+.product-card {
+  background-color: #000000; /* Black background by default */
+  color: white; /* White text by default */
+  transition: all 0.3s ease;
+}
+
+/* Add this to your :root section */
+:root {
+  --primary-color: #4299e1;
+  --secondary-color: #2b6cb0;
+  --background-color: #000000;
+  --card-background: #1a1a1a;
+  --text-color: #ffffff;
+  --accent-color: #3182ce;
+  --beige-color: #f5e6d3; /* New light beige color */
+}
+
+/* Update these styles to use the new beige color */
+
+/* Update the product image container background */
+.product-image-container {
+  background-color: var(--beige-color);
+}
+
+.product-image-container::before {
+  background: linear-gradient(135deg, var(--beige-color) 25%, transparent 25%) -50px 0,
+              linear-gradient(225deg, var(--beige-color) 25%, transparent 25%) -50px 0,
+              linear-gradient(315deg, var(--beige-color) 25%, transparent 25%),
+              linear-gradient(45deg, var(--beige-color) 25%, transparent 25%);
+  background-size: 100px 100px;
+  background-color: #e0d0b8; /* Slightly darker beige for contrast */
+  opacity: 0.3;
+}
+
+/* Update the shoe image container in the popular shoes section */
+.shoe-image-container {
+  background-color: var(--beige-color);
+}
+
+/* Add a beige accent to the header */
+header {
+  border-bottom: 3px solid var(--beige-color);
+}
+
+/* Update the filter container */
+.filter-container {
+  background-color: var(--card-background);
+  border: 2px solid var(--beige-color);
+}
+
+/* Update the add to cart button */
+.add-to-cart-btn {
+  background-color: var(--beige-color);
+  color: var(--background-color);
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e0d0b8; /* Slightly darker beige for hover state */
+}
+
+/* Update the shop now button */
+.shop-now-button {
+  background-color: var(--beige-color);
+  color: var(--background-color);
+}
+
+.shop-now-button:hover {
+  background-color: #e0d0b8; /* Slightly darker beige for hover state */
+}
+
+/* Add a beige accent to the footer */
+footer {
+  border-top: 3px solid var(--beige-color);
+}
+
+/* Update the slider arrows */
+.slider-arrow {
+  background-color: var(--beige-color);
+  color: var(--background-color);
+}
+
+.slider-arrow:hover {
+  background-color: #e0d0b8; /* Slightly darker beige for hover state */
+}
+
+/* Add a beige accent to the product cards */
+.product-card {
+  border: 2px solid var(--beige-color);
+}
+
+/* Update the visible button styles */
+.visible-button {
+  background-color: var(--beige-color);
+  color: var(--background-color);
+}
+
+.visible-button:hover {
+  background-color: #e0d0b8; /* Slightly darker beige for hover state */
+}
+
+.light-mode .product-card {
+  background-color: white; /* Light background in light mode */
+  color: black; /* Black text in light mode */
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 1s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 1s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animation-delay-150 {
+  animation-delay: 150ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-450 {
+  animation-delay: 450ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Add these styles at the end of your App.css file */
+
+/* Animated objects */
+.animated-object {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.shoe-1 {
+  width: 50px;
+  height: 25px;
+  background-color: var(--accent-color);
+  border-radius: 50% 50% 0 0;
+  animation: float-across-1 15s linear infinite;
+}
+
+.shoe-2 {
+  width: 40px;
+  height: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 0 0 50% 50%;
+  animation: float-across-2 20s linear infinite;
+}
+
+.star-1 {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid var(--accent-color);
+  animation: float-across-3 10s linear infinite;
+}
+
+.star-2 {
+  width: 15px;
+  height: 15px;
+  background-color: var(--secondary-color);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: float-across-4 12s linear infinite;
+}
+
+@keyframes float-across-1 {
+  0% { left: -50px; top: 10%; }
+  100% { left: 100%; top: 60%; }
+}
+
+@keyframes float-across-2 {
+  0% { right: -40px; top: 20%; }
+  100% { right: 100%; top: 80%; }
+}
+
+@keyframes float-across-3 {
+  0% { left: -20px; top: 70%; }
+  100% { left: 100%; top: 30%; }
+}
+
+@keyframes float-across-4 {
+  0% { right: -15px; top: 40%; }
+  100% { right: 100%; top: 10%; }
+}
