@@ -44,16 +44,16 @@ The ShoeShop e-commerce website allows users to browse a collection of shoes, vi
 
 ### File Structure
       ```bash
-   ShoeShop
-   │
-   ├── public/                   # Public assets and the index.html
-   ├── src/                      # Source files for the React components and CSS
-   │   ├── App.js                # Main application component
-   │   ├── App.css               # Global styles and animations
-   │   ├── components/           # React components (Header, Footer, ProductGrid, etc.)
-   │   └── images/               # Image assets for the products and brands
-   ├── package.json              # Project dependencies and scripts
-   └── README.md                 # This documentation file
+      ShoeShop
+      │
+      ├── public/                   # Public assets and the index.html
+      ├── src/                      # Source files for the React components and CSS
+      │   ├── App.js                # Main application component
+      │   ├── App.css               # Global styles and animations
+      │   ├── components/           # React components (Header, Footer, ProductGrid, etc.)
+      │   └── images/               # Image assets for the products and brands
+      ├── package.json              # Project dependencies and scripts
+      └── README.md                 # This documentation file
 
 ## Class Descriptions
 
