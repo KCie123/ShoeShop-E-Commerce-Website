@@ -43,7 +43,7 @@ The ShoeShop e-commerce website allows users to browse a collection of shoes, vi
 4. Open the browser and navigate to http://localhost:3000.
 
 ### File Structure
-      ```bash
+      
       ShoeShop
       │
       ├── public/                   # Public assets and the index.html
